@@ -5,6 +5,7 @@
 	import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing';
 	import { pics } from './pictures.js';
+	import { onMount } from 'svelte';
 
 	let endSlice = 0;
 	let incrementBy = 4;
@@ -22,8 +23,6 @@
 	}
 
 	shuffleArray(allPics);
-	console.log(allPics)
-	console.log(picsSliced)
 
 	const progress = tweened(0, {
 		duration: 600,
@@ -36,7 +35,6 @@
 		} else {
 			var limit = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight) - window.innerHeight;
 			if (Math.round(window.scrollY) == Math.round(limit)) {
-				console.log('at bottom')
 				let j = setInterval(function() {
 					endSlice += incrementBy;
 					progressVisible = true;
@@ -62,7 +60,13 @@
 			toolbar: 0,
 			transition: 0,
 		});
+		window.$(document).foundation();
 	}
+
+	onMount(async () => {
+		window.$(document).foundation();
+	});
+
 
 </script>
 
@@ -218,7 +222,9 @@
 	</div>
 	<div id="allPics">
 		{#each picsSliced as pic, i}
-			<img on:load|once={setupViewer} in:fade="{{duration: 1200, delay: 200 + ((i % incrementBy) * 300)}}" width="300px" src="/img/feed/{pic[0]}" alt="{pic[1]}" />
+			<span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex=0 title="{pic[1]}">
+				<img on:load|once={setupViewer} in:fade="{{duration: 1200, delay: 200 + ((i % incrementBy) * 300)}}" width="300px" src="/img/feed/{pic[0]}" alt="{pic[1]}" />
+			</span>
 		{/each}
 	</div>
 	{#if endSlice >= allPics.length}
