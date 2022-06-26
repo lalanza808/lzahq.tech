@@ -97,7 +97,7 @@
 			In the summer of 2021 I began working with my then IRC friends, and now IRL friends,
 			<a href="https://cartysewill.com" target="_blank">@cartyisme</a> and <a href="https://jwinterm.com" target="_blank">@jwinterm</a>
 			on crypto-art/NFT related projects. Since then I've been devoting more of my time to Solidity smart
-			contract and web services development for our joint LLC and supporting the NFT & web3 ecosystem which I find to be pretty neat
+			contract and web services development for our joint LLC and supporting the NFT & web3 ecosystem which I find to be pretty neat...
 			despite the fact that the scene has become propped up by unscrupulous
 			<a href="https://meaningness.com/geeks-mops-sociopaths" target="_blank">sociopaths and mops</a>.
 			I'm just a geek who is <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex=0 title="Never going to make it.">NGMI</span>.
