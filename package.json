@@ -7,7 +7,8 @@
     "dev": "npm run gen && rollup -c -w",
     "start": "npm run gen && sirv public --no-clear",
     "gen": "node src/generatePictures.js",
-    "deploy": "npm run build && aws s3 sync ./public/ s3://lzahq-prod-web-origin/ --delete --dryrun && echo -e '[+] Waiting 10 seconds before deploying...' && sleep 10 && aws s3 sync ./public/ s3://lzahq-prod-web-origin/ --delete"
+    "clean": "exiftool -all= public/img/feed && rm public/img/feed/*_original",
+    "deploy": "npm run build && npm run clean && aws s3 sync ./public/ s3://lzahq-prod-web-origin/ --delete --dryrun && echo -e '[+] Waiting 10 seconds before deploying...' && sleep 10 && aws s3 sync ./public/ s3://lzahq-prod-web-origin/ --delete"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
