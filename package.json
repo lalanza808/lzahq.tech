@@ -5,7 +5,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear"
+    "start": "sirv public --no-clear",
+    "deploy": "rollup -c && aws s3 sync ./public/ s3://lzahq-prod-web-origin/ --delete --dryrun && echo -e '[+] Waiting 10 seconds before deploying...' && sleep 10 && aws s3 sync ./public/ s3://lzahq-prod-web-origin/ --delete"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
