@@ -24,4 +24,5 @@ pics.forEach(function(i) {
 })
 
 // Render templated text with images with their associated text
-console.log(`export const pics = ${JSON.stringify(allPics)}`)
+// console.log(`export const pics = ${JSON.stringify(allPics)}`)
+fs.writeFileSync('src/pictures.js', `export const pics = ${JSON.stringify(allPics, null, 2)}`)

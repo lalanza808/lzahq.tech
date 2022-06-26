@@ -1,12 +1,12 @@
 export const pics = {
   "3d.jpg": "",
-  "animosity.jpg": "made ya speak what ya spoke",
+  "animosity.jpg": "",
   "apedin.jpg": "",
   "axin.jpg": "",
-  "beersbee.jpg": "",
   "bdoc.png": "A young lza in Afghanistan, circa 2010, flipping the bird due to his disdain with his life choices. The feeling persists to this day.",
-  "boardin2.jpg": "",
+  "beersbee.jpg": "",
   "boardin1.jpg": "",
+  "boardin2.jpg": "",
   "books.jpg": "",
   "brypto.jpg": "",
   "buckles.jpg": "",
@@ -22,6 +22,7 @@ export const pics = {
   "colo.jpg": "",
   "comics.jpg": "",
   "composers.jpg": "",
+  "consume.gif": "They live, we sleep. Artwork by Hal Hefner.",
   "cookies.jpg": "",
   "cyberpunk.jpg": "",
   "disillusionment.jpg": "",
@@ -98,5 +99,5 @@ export const pics = {
   "xbox.jpg": "",
   "yep.png": "",
   "yourefucked.jpg": "",
-  "zoomer911.jpg": "",
+  "zoomer911.jpg": ""
 }
