@@ -217,7 +217,7 @@
 	</div>
 	<div class="callout2">
 		<h3>pics</h3>
-		<p>Keep scrolling down to view more pics.</p>
+		<p>These are some pics of me, my family, screenshots, memes, shitposts, etc; a glimpse into my world. Keep scrolling to the bottom of the page to view more pics.</p>
 	</div>
 	<div id="allPics">
 		{#each picsSliced as pic, i}
