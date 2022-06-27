@@ -60,7 +60,6 @@
 			toolbar: 0,
 			transition: 0,
 		});
-		window.$(document).foundation();
 	}
 
 	onMount(async () => {
@@ -222,9 +221,7 @@
 	</div>
 	<div id="allPics">
 		{#each picsSliced as pic, i}
-			<span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex=0 title="{pic[1]}">
-				<img on:load|once={setupViewer} in:fade="{{duration: 1200, delay: 200 + ((i % incrementBy) * 300)}}" width="300px" src="/img/feed/{pic[0]}" alt="{pic[1]}" />
-			</span>
+			<img on:load|once={setupViewer} in:fade="{{duration: 1200, delay: 200 + ((i % incrementBy) * 300)}}" width="300px" src="/img/feed/{pic[0]}" alt="{pic[1]}" />
 		{/each}
 	</div>
 	{#if endSlice >= allPics.length}
